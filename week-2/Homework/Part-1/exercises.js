@@ -13,9 +13,27 @@
  *      .....
  * </div>
  */
+
+
+
+
+
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
-}
+  arrayOfPeople.forEach(element => { 
+   const element1 = document.createElement("h1")
+   const element2 =  document.createElement("h2")
+   element1.textContent = element.name;
+   element2.textContent = element.job;
+   content.appendChild(element1);
+   content.appendChild(element2);
+
+    
+  });
+
+
+
+
 
 /**
  *
@@ -24,8 +42,18 @@ function exerciseOne(arrayOfPeople) {
  * All of your HTML should go inside the Div tag with the id "content".
  *
  */
-function exerciseTwo(shopping) {
-  //Write your code in here
+
+
+function renderShoppingItems(shopping) {
+  shopping.forEach(element => {
+    const ulList = document.createElement("ul")
+    const listElement = document.createElement("li")
+    listElement.textContent = ulList;
+    content.appendChild(ulList)
+    
+  });
+
+
 }
 
 /**
@@ -58,7 +86,14 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 function exerciseThree(books) {
-  //Write your code in here
+  let content = document.querySelector("#content");
+    const list = docoment.createElement("ul");
+    content.appendChild(list)
+
+    books.forEach()
+  });
+  
+  
 }
 
 //
