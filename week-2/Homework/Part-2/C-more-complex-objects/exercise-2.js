@@ -23,6 +23,13 @@ let newCurrentOwner = {
 
   WRITE YOUR CODE BELOW
 */
+let = newCurrentOwner = {
+    firstName: "Margaret",
+    lastName: "Conway",
+    previousOwners: "Stephen B",
+    isForSale: false,
+  };
+
 
 // - assign the value of the variable 'newCurrentOwner' as the value to the house's "currentOwner"
 // - from the list of previous owners, replace only "John A." with "Stephen B."

@@ -3,12 +3,16 @@
 */
 
 var dog = {
-    name: 'Billy',
+    name: "'Billy'",
     wantsToPlay: false
 };
 
 // WRITE CODE HERE
 
+let = dog = {
+    name: "Rex",
+    wantsToPlay: true
+}
 
 //DO NOT MODIFY BELOW
 console.log(dog.name);
