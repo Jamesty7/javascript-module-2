@@ -23,12 +23,18 @@ let newCurrentOwner = {
 
   WRITE YOUR CODE BELOW
 */
-let = newCurrentOwner = {
-    firstName: "Margaret",
-    lastName: "Conway",
-    previousOwners: "Stephen B",
-    isForSale: false,
-  };
+house.currentOwner = newCurrentOwner
+house.previousOwners = house.previousOwners.map( item => {
+  if (item === "John A.") {
+    return "Stephen B."
+  } else {
+    return item 
+  }
+})
+
+house.isForSale = false
+
+
 
 
 // - assign the value of the variable 'newCurrentOwner' as the value to the house's "currentOwner"

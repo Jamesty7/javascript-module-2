@@ -9,7 +9,7 @@ var dog = {
 
 // WRITE CODE HERE
 
-let = dog = {
+dog = {
     name: "Rex",
     wantsToPlay: true
 }
