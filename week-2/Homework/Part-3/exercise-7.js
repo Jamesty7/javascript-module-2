@@ -28,7 +28,7 @@ In addition will substract 1 in the product stock of bought products
 */
 
 var products = [];
-var selectedProducts = [];
+// var selectedProducts = [];
 
 var product1 = {
   id: 1,
@@ -69,10 +69,13 @@ var shoppingCart = {
   selectedProducts: []
 };
 
-function addToShoppingCart(id){
-  let product = products.find(product => product.id === id);
-  shoppingCart.selectedProducts.push(product)
-  shoppingCart.totalPrice = shoppingCart.totalPrice + product.price
+function addToShoppingCart(id) {
+  let product = products.find(product => product.id === id)
+
+  if (product.stock >= 1) {
+    shoppingCart.selectedProducts.push(product)
+    shoppingCart.totalPrice = shoppingCart.totalPrice + product.price
+  }
 }
 
 function removeFromShoppingCart(id) {
@@ -84,9 +87,16 @@ function removeFromShoppingCart(id) {
   } 
 }
 
-function shop(){
-  let bought = selectedProducts
+function shop() {
+  // update stock 
+   shoppingCart.selectedProducts.forEach(product => { 
+     let indexInStock = products.findIndex(stockProduct => product.id === stockProduct.id)
+     products[indexInStock].stock = products[indexInStock].stock - 1
+   });
 
+  // reset shoppingCart
+    shoppingCart.selectedProducts = []
+    shoppingCart.totalPrice = 0
 }
 
 //results

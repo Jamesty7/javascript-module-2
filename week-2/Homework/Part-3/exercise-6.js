@@ -120,7 +120,7 @@ mentors.forEach(itemMentor => {
 
     itemMentor.class = "Jun1"
     itemMentor.skills.push("SQL")
-  }
+  })
 
 
 
