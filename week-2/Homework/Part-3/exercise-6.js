@@ -101,3 +101,26 @@ var mentors = [
 
 //YOUR CODE HERE
 
+
+
+
+
+mentors.filter(mentor => {
+  let isInBarcelona = mentor.job.city === "Barcelona" 
+  let knowsReact = mentor.skills.includes("React")
+
+  return isInBarcelona && knowsReact
+}).forEach(mentor => {
+  console.log(`Hi, my name is ${mentor.firstName} ${mentor.lastName}. I work in Barcelona and i know React.`)
+})
+
+
+mentors.forEach(itemMentor => {
+  if (itemMentor.job.city === "Barcelona") {
+
+    itemMentor.class = "Jun1"
+    itemMentor.skills.push("SQL")
+  }
+
+
+
